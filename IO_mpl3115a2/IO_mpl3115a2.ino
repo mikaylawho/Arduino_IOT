@@ -20,6 +20,7 @@ Adafruit_MPL3115A2 baro = Adafruit_MPL3115A2();
 
 // set up the feeds
 AdafruitIO_Feed *temperature = io.feed("temperature");
+AdafruitIO_Feed *f_temperature = io.feed("f_temperature");
 AdafruitIO_Feed *altitude = io.feed("altitude");
 AdafruitIO_Feed *pressure = io.feed("pressure");
 
@@ -70,6 +71,14 @@ void loop() {
   Serial.print(tempC); Serial.println("*C");
 
   temperature->save(tempC);
+  
+  
+  //do C->F conversion and upload to Adafruit IO
+  float f_temp = tempC * 1.8 + 32;
+
+  Serial.print(f_temp); Serial.println("*F");
+  
+  f_temperature->save(f_temp);
 
   delay(60000);
 }
