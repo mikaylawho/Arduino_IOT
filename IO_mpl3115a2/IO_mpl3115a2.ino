@@ -1,21 +1,10 @@
 /**************************************************************************/
 /*!
-    @file     Adafruit_MPL3115A2.cpp
-    @author   K.Townsend (Adafruit Industries)
-    @license  BSD (see license.txt)
+    @file     IO_mpl3115a2.ino
+    @author   Mikel Hensley
+    @license  
 
-    Example for the MPL3115A2 barometric pressure sensor
-
-    This is a library for the Adafruit MPL3115A2 breakout
-    ----> https://www.adafruit.com/products/1893
-
-    Adafruit invests time and resources providing this open source code,
-    please support Adafruit and open-source hardware by purchasing
-    products from Adafruit!
-
-    @section  HISTORY
-
-    v1.0 - First release
+    Feeds data to Adafruit.IO via the MPL3115A2 Altimeter chip using HUZZAH ESP8266 wifi breakout board. 
 */
 /**************************************************************************/
 
@@ -36,8 +25,6 @@ AdafruitIO_Feed *pressure = io.feed("pressure");
 
 void setup() {
   Serial.begin(115200);
-  Serial.println("Adafruit_MPL3115A2 test!");
-
 
   // connect to io.adafruit.com
   Serial.print("Connecting to Adafruit IO");
