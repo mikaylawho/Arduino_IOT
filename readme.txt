@@ -1,3 +1,8 @@
+05/21/2018: Sucessfully tested the MPL3115A2 sensor, and now uploading sensor
+data to adafruit AO.
+
+Next Steps: Display the data on a custom webpage.
+
 05/20/2018: Test of the Adafruit HUZZAH ESP8266 wifi module is complete.
 I can now connect to the led_zepplin wifi network and make a connection with 
 a site on the internet. Right now the installed code is 
