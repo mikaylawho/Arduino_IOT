@@ -1,3 +1,5 @@
+05/22/2018: Added tempuratures in F.
+
 05/21/2018: Sucessfully tested the MPL3115A2 sensor, and now uploading sensor
 data to adafruit AO.
 
